@@ -9,7 +9,8 @@ function App() {
 
   const fetchRecipes = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/recipes');
+      const response = await axios.get(`http://localhost:8000/recipes/`);
+      setRecipes(response.data);
     } catch(error){
       console.error('Error fetching recipes:', error);
     }
@@ -28,10 +29,6 @@ function App() {
       </header>
     </div>
   );
-
-
-
-
 }
 
 export default App;
