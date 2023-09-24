@@ -8,7 +8,7 @@ const AddRecipe = (props) => {
     const [instructions, setInstructions] = useState('');
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(e);
 
         try{
             await axios.post('http://localhost:8000/recipes/', {
